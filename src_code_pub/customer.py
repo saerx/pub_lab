@@ -4,5 +4,6 @@ class Customer:
         self.name = name
         self.wallet = wallet
         self.age = age
+        self.drunkenness = 0
 
     

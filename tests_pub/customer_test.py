@@ -13,3 +13,6 @@ class TestCustomer(unittest.TestCase):
 
     def test_customer_has_age(self):
         self.assertEqual(21, self.customer.age)
+
+    def test_customer_drunkenness_level(self):
+        self.assertEqual(0, self.customer.drunkenness)
