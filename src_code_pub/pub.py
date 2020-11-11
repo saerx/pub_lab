@@ -13,5 +13,8 @@ class Pub:
             customer.wallet -= drink.price
             customer.increase_drunkenness(drink)
 
-        
+    def sell_food(self, customer, food):
+        self.till += food.price
+        customer.wallet -= food.price
+        customer.decrease_drunkenness(food)
 

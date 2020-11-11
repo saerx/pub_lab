@@ -10,5 +10,5 @@ class Customer:
         self.drunkenness += drink.alcohol_level
         
 
-    # def decrease_drunkenness(self, food):
-    #     self.drunkenness -= food.rejuvenation_level
+    def decrease_drunkenness(self, food):
+        self.drunkenness -= food.rejuvenation_level
