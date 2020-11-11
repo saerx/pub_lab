@@ -3,7 +3,7 @@ class Pub:
     def __init__(self, name, till):
         self.name = name
         self.till = till
-        # self.drinks = drinks
+        self.stock = stock
 
     def sell_drink(self, customer, drink):
         # Money leaves customer wallet
@@ -18,3 +18,7 @@ class Pub:
         customer.wallet -= food.price
         customer.decrease_drunkenness(food)
 
+    # def stock_value(self):
+    #     total_values_by_drink = []
+    #     for drink_for_sale in self.stock:
+    #     total_values_by_drink.append(drink_for_sale.amount * drink_for_sale.drink.price)

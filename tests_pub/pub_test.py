@@ -6,7 +6,16 @@ from src_code_pub.food import Food
 
 class TestPub(unittest.TestCase):
     def setUp(self):
-        self.pub = Pub("Chicken Fun", 200)
+        self.pub = self.pub = Pub("Chicken Fun", 200, [{
+            drink : Drink("Guinness", 3, 2),
+            amount : 30
+        }, {
+            drink : Drink("Punk IPA", 4, 3),
+            amount : 20
+        }, {
+            drink : Drink("vodka", 3, 2),
+            amount: 40
+        }])
 
     def test_pub_has_name(self):
         self.assertEqual("Chicken Fun", self.pub.name)
