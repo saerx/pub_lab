@@ -32,4 +32,13 @@ class TestPub(unittest.TestCase):
         drink_1 = Drink("Guinness", 3, 2)
         self.pub.sell_drink(customer_1, drink_1)
         self.assertEqual(2, customer_1.drunkenness)
-        
+
+    def test_knockback__true(self):
+        customer_1 = Customer("Al McWhiggin", 40, 21)
+        drink_2 = Drink("Death_Drink", 3, 11)
+        self.pub.sell_drink(customer_1, drink_2)
+        self.pub.sell_drink(customer_1, drink_2)
+        self.assertEqual(37, customer_1.wallet)
+        self.assertEqual(203, self.pub.till)
+        self.assertEqual(11, customer_1.drunkenness)
+
