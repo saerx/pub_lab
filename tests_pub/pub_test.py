@@ -26,3 +26,10 @@ class TestPub(unittest.TestCase):
         self.pub.sell_drink(customer_2, drink_1)
         self.assertEqual(500, customer_2.wallet)
         self.assertEqual(200, self.pub.till)
+
+    def test_make_customer_drunk(self):
+        customer_1 = Customer("Al McWhiggin", 40, 21)
+        drink_1 = Drink("Guinness", 3, 2)
+        self.pub.sell_drink(customer_1, drink_1)
+        self.assertEqual(2, customer_1.drunkenness)
+        

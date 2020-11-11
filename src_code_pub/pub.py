@@ -13,4 +13,7 @@ class Pub:
         else:
             self.till += drink.price
             customer.wallet -= drink.price
+            customer.increase_drunkenness(drink)
+
+        
 

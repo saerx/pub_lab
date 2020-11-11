@@ -5,4 +5,4 @@ class Drink:
         self.price = price
         self.alcohol_level = alcohol_level
 
-        
+    
