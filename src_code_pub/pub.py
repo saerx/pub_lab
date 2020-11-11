@@ -8,6 +8,9 @@ class Pub:
     def sell_drink(self, customer, drink):
         # Money leaves customer wallet
         # Increase money in pub till by drink price
-        self.till += drink.price
-        customer.wallet -= drink.price
+        if customer.age < 18:
+            return None
+        else:
+            self.till += drink.price
+            customer.wallet -= drink.price
 
