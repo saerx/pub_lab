@@ -14,9 +14,10 @@ class TestPub(unittest.TestCase):
         self.assertEqual(200, self.pub.till)
 
     def test_pub_can_sell_drink(self):
-        customer_1 = Customer("Al McWhiggin", 40)
+        customer_1 = Customer("Al McWhiggin", 40, 21)
         drink_1 = Drink("Guiness", 3)
         self.pub.sell_drink(customer_1, drink_1)
         self.assertEqual(37, customer_1.wallet)
         self.assertEqual(203, self.pub.till)
+        
 
