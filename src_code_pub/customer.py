@@ -6,4 +6,8 @@ class Customer:
         self.age = age
         self.drunkenness = 0
 
+    def increase_drunkenness(self, drink):
+        self.drunkenness += drink.alcohol_level
+        
+
     

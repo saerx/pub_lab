@@ -1,5 +1,6 @@
 import unittest
 from src_code_pub.customer import Customer
+from src_code_pub.drink import Drink
 
 class TestCustomer(unittest.TestCase):
     def setUp(self):
@@ -16,3 +17,8 @@ class TestCustomer(unittest.TestCase):
 
     def test_customer_drunkenness_level(self):
         self.assertEqual(0, self.customer.drunkenness)
+
+    def test_increase_drunkenness(self):
+        drink_1 = Drink("Guinness", 3, 2)
+        self.customer.increase_drunkenness(drink_1)
+        self.assertEqual(2, self.customer.drunkenness)
